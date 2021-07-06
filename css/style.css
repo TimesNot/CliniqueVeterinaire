@@ -1,0 +1,1199 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container-center{
+	margin-top: 1%;
+}
+/* Navbar */
+.navbar{
+	background-color:transparent;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	z-index: 2;
+	height: 15%;
+	flex-wrap: nowrap;
+	position: fixed;
+}
+.navigation .lien-nav{
+	list-style: none;
+}	
+.lien-nav li , a {
+	display: inline-block;
+}
+
+.navigation a {
+	color: white;
+	padding: 1em;
+	display: block;
+	text-decoration: none;
+	font-size: 110%;
+}
+.lien-nav li a:hover{
+	transition: 1s;
+	border-radius: 50px;
+	background-color:red;
+}
+.logo{
+	height: 100px;
+	cursor: pointer;
+	padding: 0px;
+}
+.facebook{
+	height: 30px;
+}
+.facebook:hover{
+	background-color: red;
+	transition: 1s;
+	border-radius: 20px;
+}
+.container-logo{
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	color: white;
+}
+.navbar .container-logo {
+	font-size: 90%;
+}
+.lien-nav{
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+.navbar .scroll{
+	background-color: #080001;
+}
+.titre{
+	text-shadow: 2px 2px 2px blue;
+}
+/* Banniere */
+
+.banniere{
+	background: url("https://images.pexels.com/photos/1022158/pexels-photo-1022158.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center center; 
+	height:100vh;
+	width: 100%;
+	background-size: cover;
+}
+.box-titre{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+.titre-banniere{
+	color: white;
+	text-shadow: 2px 2px 2px blue;
+	font-size: 350%;	
+}
+/* Bouton flottant */
+.floating-btn{
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	width: 75px;
+	height: 75px;
+	border: none;
+	cursor: pointer;
+	border-radius: 50%;
+	background: #30FF00;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.7;
+}
+.floating-btn img{
+	width: 50px;
+	height: 50px;
+}
+.floating-btn .text-btn{
+	position: absolute;
+	background: #FF3838;
+	color: white;
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 3px;
+	text-align: center;
+	width: 200px;
+	transform: translate(-150px,-30%);
+	display: none;
+}
+.floating-btn:hover{
+	opacity: 1;
+}
+.floating-btn:hover .text-btn{
+	display: block;
+}
+/* Contenu page d'accueil */
+.container-info{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column; 
+	align-items: center;
+}
+.container-info > div{
+	background-color: white;
+	margin: 10px;
+	padding: 20px;
+	font-size: 20px;
+}
+.titre-horaires{
+	color: #373636;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: underline;
+	text-align: center;
+	margin-bottom: 1%;
+}
+/*  horaires */
+.card{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "lato";
+	overflow: hidden;
+	border-radius: 16px;
+	width: 720px;
+	height: 700px;
+	background: url("https://cdn.pixabay.com/photo/2016/09/12/07/55/thefifthwatches-1663278_960_720.jpg") no-repeat;
+	background-size: 720px 700px;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+.card::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.card .img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+.content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: white;
+	padding: 20px 20px;
+	width: 80%;
+	height: 80%;
+	transform: translateY(100%);
+}
+.card:hover .content {
+	transform: translateY(0%);
+	transition: 1s;
+	transition-delay: 0.3;
+	background-color: rgba(0, 0, 0, 0.92);
+}
+.content .horaires{
+	text-align: center;
+	color: black;
+}
+.card .content .numero{
+	color: red;
+	font-size: 200%;
+	text-decoration: underline overline red;
+	
+}
+.content .horaires span{
+	text-decoration: underline;
+}
+.content .title-card{
+	font-size: 160%;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: black;
+}
+.content h4{
+	color: black;
+}
+/* Adresse */
+.container-adresse{
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+.container-adresse h3{
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 2%;
+	font-size: 150%;
+	text-decoration: underline;
+	color: #373636;
+	font-family: 'Montserrat', sans-serif;
+}
+.container-adresse .adresse{
+	display: flex;
+	justify-content: center;
+	margin-left: 10%;
+}
+.container-adresse .img-clinique img{
+	height: 100%;
+	width: 100%;
+}
+.container-adresse .parking img{
+	height: 50%;
+	width: 50%;
+	margin-top: 10%;
+}
+.right-part{
+	margin-top: 1%;
+	margin-bottom: 1%;
+	font-size: 120%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.container-adresse .text-parking{
+	margin-top: 5%;
+	margin-bottom: 1%;
+	text-decoration: underline ;
+	font-size: 110%;
+}
+/* CONTACT */
+.container-main-num{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 1%;
+}
+.container-main-num .text-numero{
+	font-size: 150%;
+	font-weight: bold;
+}
+.container-main-num .emergency{
+	padding : 0px 20px 1px 20px ; 
+	font-size: 120%;
+}
+.emergency img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.container-main-num .numero{
+	margin-left: 15%;
+}
+.container-main-num .numero img{
+	margin-left: auto;
+	margin-right: auto;
+}
+.container-main-num .container-emergency , .urgences-phone{
+	color: red;
+	text-align: center;
+}
+.container-main-num .container-emergency .num-urgence{
+	text-transform: uppercase;
+	text-align: center;
+}
+.container-numero h4{
+	font-size: 150%;
+	text-align: center;
+	text-decoration: underline;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	color: #373636;
+	padding: 15px;
+}
+.container-facebook .text-facebook{
+	font-size: 110%;
+}
+/* mise en page "Partenaires" */
+.container-partners h5{
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 150%;
+	text-transform: uppercase ;
+	text-decoration: underline;
+	color: #373636;
+	margin-top: 1%;
+}
+.container-partners .lien{
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.container-partners a{
+	text-decoration: none;
+	color: #55F365;
+	transition: 1s;
+}
+.container-partners a:hover{
+	text-decoration: underline;
+	color: #02FFE6;
+	font-size: 115%;
+}
+.container-partners .section-partners{
+	display: flex;
+}
+.container-partners .section-partners img{
+	width: 400px;
+	height: 300px;
+}
+.partners{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+div.section-partners {
+	margin: 25px;
+	border: 1px solid #ccc;
+	width: 400px;
+	flex-direction: column;
+	background-color: transparent;
+  }
+  
+  div.section-partners:hover {
+	border: 1px solid #777;
+  }
+  div.text-partners {
+	padding: 15px;
+	text-align: center;
+	color: white;
+	background-color: black;
+	height: 100%;
+  }
+  div.text-partners-AA , .text-partners-Adom {
+	padding: 15px;
+	text-align: center;
+	color: white;
+	background-color: black;
+	height: 100%;
+  }
+div.text-partners-AA p{
+	text-transform: uppercase;
+}
+.text-partners-Adom{
+	padding: 15px;
+	text-align: center;
+	color: white;
+	background-color: black;
+	height: 100%;
+	margin-top: 1%;
+}
+/* MAP */
+.map{
+	width: 100%;
+	margin-top: 1%;
+}
+.title-map h5{
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 150%;
+	text-transform: uppercase ;
+	text-decoration: underline;
+	color: #373636;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+/*Footer*/
+.info-footer{
+	background-color: black;
+	color: white;
+}
+.low-footer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.connexion-footer{
+	float: right;
+	padding: 15px 32px;
+	background-color: orange;
+	border-radius: 50%;
+}
+.footer-pages{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: black;
+	color: white;
+	font-size: 150%;
+}
+.footer-absolute{
+	position: absolute;
+	bottom: 0;
+	background-color: black;
+	width: 100%;
+	color: white;
+}
+.footer-absolute p{
+	margin-left: 1%;
+}
+.navigation-footer .lien-nav{
+	list-style: none;
+}	
+.navigation-footer a {
+	color: white;
+	padding: 1em;
+	display: block;
+	text-decoration: none;
+	font-size: 110%;
+}
+.navigation-footer .lien-nav{
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: center;
+}
+.low-footer-absolute{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.low-footer-legale .footer-legale{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.footer-legale li{
+	list-style: none;
+}
+.footer-legale li:nth-child(2){
+	margin-left: 1%;
+}
+.footer-legale a{
+	text-decoration: none;
+	color: white;
+}
+/* mise en forme bouton connexion */
+.connexion{
+	position: absolute;
+	right: 0;
+	padding: 15px 32px;
+	background-color: orange;
+	border-radius: 30%;
+	bottom: 0;
+}
+.connexion a{
+	color: white;
+}
+.container-lien-admin button{
+	position: absolute;
+	right: 10%;
+	background-color: orangered;
+	border-radius: 40%;
+}
+.container-lien-admin a{
+	text-decoration: none;
+	color: white;
+}
+/* navbar page Clinique , .... */
+.navbar-include{
+	background-color: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	z-index: 2;
+	height: 15%;
+	flex-wrap: nowrap;
+
+}
+/* Page Clinique */
+.Container-banniere-pages .titre-banniere-pages {
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase ;
+	text-decoration: underline;
+	color: #373636;
+	margin-top: 1%;
+	margin-bottom: 1%;
+  }
+.img-page-Clinique img{
+	width: 300px;
+	height: 200px;
+}
+.map-acces-clinique h4{
+	font-family: "Montserrat",sans-serif;
+	color: #373636;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 150%;
+}
+.main-container-pages-clinique h5{
+	font-family: "Montserrat",sans-serif;
+	color: #373636;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 120%;
+	margin-bottom: 0.5%;
+}
+.main-container-pages-clinique h6{
+	color: #373636;
+	text-align: center;
+	font-weight: bold;
+	font-size: 120%;
+	margin-bottom: 0.5%;
+}
+.container-map-clinique iframe{
+	border-radius: 50px;
+	margin-bottom: 1%;
+	width: 100%;
+	margin-top: 1%;
+} 
+.main-container-pages-clinique{
+	text-align: center;
+}
+.container-page-clinique .content-page-clinique{
+	position: absolute;
+	bottom: 0;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+	color: #f1f1f1;
+	width: 50%;
+	padding: 20px;
+	margin-left: 25%;
+}
+.container-image-page-clinique img{
+	height: 78vh;
+}
+.infos-supp-clinique{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.info-supp-parking{
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+.img-payment:nth-child(1){
+	margin-right: 1%;
+}
+.img-payment:nth-child(2){
+	margin-right: 1%;
+}
+.text-supp-parking p{
+	font-size: 110%;
+	margin-top: 1%;
+	font-weight: bold;
+}
+  /* Page Equipe  */
+  /* Carte équipe */
+.cards-team{
+	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	  transition: 0.3s;
+	  width: 100%;
+	  padding: 5px;
+  }
+.cards-team:hover{
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.role-team{
+	padding: 2px 16px;
+}
+.container-team{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1%;
+}
+/* Page Service */
+.left-emergency{
+	width: 25%;
+	background-color: red;
+	border-radius: 10px;
+	margin: 0 auto;
+    width: 50%;
+	margin-top: 1%;
+
+}
+.left-emergency .left-text-emergency{
+	color: white;
+	text-align: center;
+}
+.left-emergency .left-text-emergency h3{
+	text-decoration: underline;
+	font-family: "Montserrat" , sans-serif;
+	font-size: 150%;
+}
+.left-emergency .left-text-emergency .left-phone{
+	font-size: 150%;
+	font-weight: bold;
+}
+.left-emergency .left-text-emergency h4{
+	text-decoration: underline;
+	font-family: "Montserrat" , sans-serif;
+	margin-bottom: 1%;
+}
+.left-emergency .left-text-emergency .left-days{
+	text-decoration: underline;
+}
+.left-emergency .left-text-emergency .left-days-text {
+	text-decoration: underline;
+}
+.left-emergency .left-text-emergency .left-phone-emergency{
+	font-size: 150%;
+	font-weight: bold;
+}
+
+.Container-banniere-pages .container-cards-services{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Montserrat', sans-serif;
+	flex-wrap: wrap;
+}
+.container-cards-services img{
+	width: 100%;
+	
+}
+.containers-cards{
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 50px;	
+}
+.containers-cards .cards-services{
+	position: relative;
+	box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+.containers-cards .cards-services .face{
+	width: 300px;
+	height: 200px;
+	transition: 0.5s;
+}
+.containers-cards .cards-services .face.cards-container{
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	
+}
+.containers-cards .cards-services .face.card-text{
+	position: relative;
+	background-color: #373636;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+	box-sizing: border-box;
+	box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+	height: 230px;
+}
+.cards-services .content-service h3{
+	text-align: center;
+	font-weight: bold;
+	text-decoration: underline;
+	color: white;
+}
+.cards-services .content-service p{
+	color: white;
+	margin-top: 5%;
+	font-size: 95%;
+}
+.content-service li{
+	list-style: none;
+	color: white;
+}
+.content-service li::before{
+	content: "- ";
+}
+.content-service .conseil-emergency .text-emergency{
+	font-size: 110%;
+}
+.cards-services .en-savoir-plus{
+	background-color: red;
+	margin-top: 2%;
+
+}
+.cards-services a{
+	color: white;
+}
+/* Page Album Photo */
+/* Album photo */
+.container-photo{
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+.mySlides{
+	display: none;
+}
+.slideshow-gallery img{
+	vertical-align: middle;
+}
+.container-photo h1{
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase ;
+	text-decoration: underline;
+	color: #373636;
+}
+/* Slideshow container */
+.slideshow-gallery {
+	max-width: 50%;
+	position: relative;
+	margin: auto;
+  }
+  
+  /* Caption text */
+  .text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+	font-size: 110%;
+	background-color: black;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+  }
+  
+  .active {
+	background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .slides {
+	-webkit-animation-name: slides;
+	-webkit-animation-duration: 2s;
+	animation-name: slides;
+	animation-duration: 2s;
+  }
+  
+  @-webkit-keyframes slides {
+	from {opacity: .4} 
+	to {opacity: 1}
+  }
+  
+  @keyframes slides {
+	from {opacity: .4} 
+	to {opacity: 1}
+  }
+  
+/* Page  Medecine Generale */
+.main-container-information-service{
+	margin: 0 auto;
+    width: 50%;
+
+}
+.container-title-information{
+	font-family: "Montserrat", sans-serif;
+	text-decoration: underline;
+}
+.container-title-information h2{
+	text-align: center;
+	margin-bottom: 1%;
+}
+.content-img-services img{
+	width: 50%;
+	margin-left: 25%;
+}
+.content-text-services{
+	text-align: justify;
+	width: 100%;
+	text-decoration: none;
+}
+.content-text-services .list-services{
+	text-decoration: none;
+	text-align: justify;
+	list-style: none;
+	font-weight: bold;
+}
+.content-text-services .text-title-services{
+		font-size: 150%;
+		text-decoration: underline;
+}
+
+/* Page Partenaires */
+
+.Container-page-partenaire{
+	display: flex;
+	justify-content: center;
+	margin-top: 1%;
+	flex-wrap: wrap;
+}
+.section-partners-page-partenaire{
+	margin: 25px;
+	width:400px;
+	height: 300px;
+  }
+  
+  .section-partners-page-partenaire:hover {
+	transition: 1s;
+  }
+  
+  .section-partners-page-partenaire img {
+	width: 100%;
+	height: 100%;
+  }
+  
+.text-partners-page-partenaire {
+	padding: 15px;
+	text-align: center;
+	color: white;
+	background-color: black;
+  }
+.text-partners-page-partenaire .lien{
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.text-partners-page-partenaire a{
+	text-decoration: none;
+	color: #55F365;
+}
+.text-partners-page-partenaire a:hover{
+	text-decoration: underline;
+	color: #02FFE6;
+	transition: 1s;
+}
+/* Animation Page Partenaire Card  */
+.rotate-card {
+	background-color: transparent;
+	width: 400px;
+	height: 350px;
+	perspective: 1000px;
+	box-shadow:5px 5px #888888;
+	flex-wrap: nowrap;
+  }
+  
+  .rotate-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+.rotate-card:hover .rotate-card-inner {
+	transform: rotateY(180deg);
+}
+  
+.rotate-card-front, .card-back-partenaire {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+  
+.rotate-card-front {
+	background-color: #bbb;
+	color: black;
+}
+  
+.card-back-partenaire {
+	background-color: #2980b9;
+	color: white;
+	transform: rotateY(180deg);
+	height:100%;
+}
+.rotate-card img{
+	  background-color: white;
+}
+.rotate-card-page-partenaire{
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  margin-top: 3%;
+	  flex-wrap: wrap;
+}
+.rotate-card:nth-child(1){
+	  margin-right: 2%;
+}
+.rotate-card:nth-child(2){
+	margin-right: 2%;
+}
+.rotate-card .card-back-partenaire h1{
+	  text-decoration: underline;
+	  font-family: "Montserrat", sans-serif;
+
+}
+.rotate-card .card-back-partenaire p{
+	  font-size: 120%;
+	  margin-top: 15%;
+}
+.card-back-partenaire a:hover{
+	  text-decoration: none;
+	  color: #55F365;
+	  font-weight: bold;
+}
+.card-partner-adom{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.card-partner-adom img{
+	width: 25%;
+	height: 25%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.card-partner-adom .banniere-adom{
+	width: 30%;
+}
+.role-adom{
+	display: flex;
+	justify-content: center;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	padding: 5px;
+}
+.title-card-adom{
+	margin-top: 1%;
+	font-weight: bold;
+}
+.emergency-adom h4{
+	font-size: 150%;
+}
+.emergency-adom p{
+	font-size: 110%;
+}
+.num-phone-adom{
+	padding: 5px;
+	font-size: 150%;
+}
+.actions-adom{
+	color: red;
+	font-size: 120%;
+	font-weight: bold;
+}
+.lien-adom{
+	color: #3D9DFE;
+}
+.card-back-partenaire-adom {
+	color: black;
+	transform: rotateY(180deg);
+	height: 100%;
+}
+.lien-adom a:hover{
+	text-decoration: none;
+	color: #059113 ;
+	font-size: 110%;
+}
+/* Page Contact */
+.contact-page-contact{
+	display: flex;
+	justify-content: center;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+.container-facebook-page-contact{
+	position: relative;
+	width: 400px;
+	height: 300px;
+} 
+.container-facebook-page-contact img{
+	display: block;
+	width: 100%;
+	height: 300px;
+}
+.overlay-contact{
+	position: absolute;
+	bottom: 0;
+	left: 100%;
+	right: 0;
+	background-color: #008CBA;
+	overflow: hidden;
+  	width: 0;
+  	height: 100%;
+  	transition: .5s ease;
+}
+.container-facebook-page-contact:hover .overlay-contact{
+	width: 100%;
+  	left: 0;
+}
+.text-contact{
+	color: white;
+  	position: absolute;
+  	top: 45%;
+	transform: translate(-50%, -50%,);
+	white-space: nowrap;
+	left: 50%;
+	font-size: 150%;
+}
+.text-contact a{
+	text-decoration: none;
+	color: orange;
+	transition: .6s;
+}
+.text-contact a:hover{
+	color: #02FFE6;
+	font-size: 150%;
+}
+.text-contact .lien-contact{
+	font-size: 130%;
+}
+.container-facebook-left{
+	margin-left: 2%;
+}
+.container-facebook-left{
+	position: relative;
+	width: 400px;
+	height: 300px;
+}
+.container-facebook-left img{
+	display: block;
+	width: 100%;
+	height: 300px;
+}
+.overlay-contact-left{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 100;
+	background-color: #008CBA;
+	overflow: hidden;
+  	width: 0;
+  	height: 100%;
+  	transition: .5s ease;
+}
+.container-facebook-left:hover .overlay-contact-left{
+	width: 100%;
+  	left: 0;
+}
+.text-contact-left{
+	color: white;
+  	position: absolute;
+  	top: 45%;
+	transform: translate(-50%, -50%,);
+	white-space: nowrap;
+	left: 35%;
+	font-size: 160%;
+}
+.back-text-contact{
+	position: absolute;
+	top: 60%;
+	left: 2%;
+	color: white;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+.front-card-contact{
+	position: absolute;
+	top: 2%;
+    right: 0;
+	z-index: 99;
+}
+.front-card-contact p{
+	background:white; 
+	color: black;
+	transition: background 1s , color 0.5s , font-size 1s ;
+	padding: 5px;
+}
+.container-facebook-page-contact .front-text-contact{
+	color: white;
+	font-size: 120%;
+}
+.container-facebook-page-contact:hover .front-card-contact p{
+	background: transparent;
+	color: white;
+	font-size: 150%;
+}
+.container-facebook-left:hover .front-card-contact p{
+	background: transparent;
+	color: white;
+	font-size: 130%;
+}
+.container-facebook-left:hover .back-text-contact{
+	opacity: 1;
+}
+.top-contact-container{
+	background-color: #8E8B8B;
+	border-radius: 10px;
+	margin: 0 auto;
+    width: 50%;
+	margin-bottom: 3%;
+}
+.top-contact-container .top-contact-clinique{
+	color: white;
+	text-align: center;
+}
+.top-contact-clinique h2{
+	text-decoration: underline;
+	padding: 5px;
+}
+.top-contact-clinique h3{
+	text-decoration: underline;
+	font-family: "Montserrat" , sans-serif;
+	font-size: 150%;
+	font-weight: bold;
+	margin-bottom: 1%;
+}
+.top-contact-container .top-phone{
+	font-size: 170%;
+	font-weight: bold;
+}
+.top-contact-container .text-top-week{
+	padding: 2px;
+}
+.top-contact-container .timetable-week{
+	padding: 2px;
+}
+/* Espace Administrateur */
+.container-admin .title-admin h1{
+	text-align: center;
+}
+.form-connexion{
+	margin-top: 5%;
+	text-align: center;
+}
+.form-connexion input[type="reset"]{
+	background-color: red;
+	color: white;
+	margin-top: 2%;
+}
+.form-connexion input[type="submit"]{
+	background-color: green;
+	color: white;
+	margin-top: 2%;
+}
+/* Responsive  */
+@media all and (max-width: 480px) {
+	.container-logo{
+		flex-direction: column;
+	}
+	.navigation{
+		display: none;
+	}
+	.titre{
+		font-size: 60%;
+		padding: 0px 0px 0px 50px ;
+	}
+	.card{
+		width: 90%;
+		height: 90%;
+		background-size: cover;
+	}
+	.content{
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+	.container-main-num{
+		flex-direction: column;
+	}
+}
